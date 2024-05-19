@@ -73,4 +73,16 @@
   body {
     @apply bg-app text-white font-primary leading-loose;
   }
+
+  .title {
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+  }
+
+  .subtitle {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+
+  .heading {
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
 }
