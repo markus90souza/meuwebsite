@@ -1,5 +1,6 @@
 import { Photo } from '@/components/photo'
 import { Socials } from '@/components/socials'
+import { Stats } from '@/components/stats'
 import { Button } from '@/components/ui/button'
 import { DownloadIcon } from 'lucide-react'
 
@@ -44,6 +45,8 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+
+      <Stats />
     </section>
   )
 }
