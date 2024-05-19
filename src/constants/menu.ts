@@ -12,7 +12,7 @@ export const links = [
     href: '/resume',
   },
   {
-    name: 'Freelancers | Projetos',
+    name: 'Projetos',
     href: '/projects',
   },
   {
