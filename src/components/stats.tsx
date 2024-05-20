@@ -1,29 +1,11 @@
 "use client" 
+import { stats } from '@/constants/stats'
 import { cn } from '@/lib/utils'
 import type { FC } from 'react'
 import CountUp from 'react-countup'
 
 
-const stats = [
-  {
-    value: '06',
-    title: '+ Anos de experiência',
-  },
-  {
-    value: 12,
-    title: 'Projetos desenvolvidos',
-  },
-  {
-    value: '08',
-    title: 'Clientes atendidos',
-  },
 
-  {
-    value: '08',
-    title: 'Tecnologias usadas',
-  },
-
-]
 export const Stats: FC = () => {
   return (
     <section className="pt-4 pb-12 xl:pb-0 xl:pt-0">
