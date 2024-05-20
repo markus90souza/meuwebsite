@@ -19,7 +19,7 @@ const ServicesPage = () => {
               ease: 'easeIn'
             }
           }}
-          className='grid grid-cols-1 sm:gap-x-0 md:grid-cols-2 gap-14'
+          className='grid grid-cols-1  md:grid-cols-2 md:gap-14 gap-y-14 gap-x-0'
         >
           {
             services.map((service, index) => {
