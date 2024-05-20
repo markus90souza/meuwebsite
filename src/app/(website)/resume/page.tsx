@@ -36,7 +36,7 @@ const ResumePage = () => {
               Experiências
             </TabsTrigger>
             <TabsTrigger value="education">
-              Formação Academica e Profissional
+              Formação Academica 
             </TabsTrigger>
             <TabsTrigger value="skills">
               Minhas skills
