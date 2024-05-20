@@ -81,7 +81,42 @@ const ResumePage = () => {
                 </div>
             </TabsContent>
             <TabsContent value="education" className="w-full min-h-[480px]">
-                Formação Academica e Profissional
+            <div className="flex flex-col gap-8 text-center xl:text-left">
+                  <header className="flex flex-col gap-4">
+                    <strong className="text-4xl font-semibold">
+                      {education.title}
+                    </strong>
+                    <span className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{
+                      education.description}
+                    </span>
+                  </header>
+
+                  <ScrollArea className="h-[400px]">
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      {
+                        education.educations.map((edu, index) => {
+                          return (
+                            <li key={index} className="h-auto w-full  bg-[#232329] rounded-xl gap-1 lg:items-start flex flex-col items-center justify-center py-6 px-10">
+                              <span className="text-app-accent">
+                                {edu.date}
+                              </span>
+                              <strong className="text-xl max-w-64 min-h-16 text-center lg:text-left">
+                                {edu.institution}
+                              </strong>
+
+                            
+                              <div className="flex items-center gap-3">
+                                <span className="h-2 w-2 rounded-full bg-app-accent" />
+                                <span className="text-white/60">{edu.name}</span>
+                              </div>
+
+                            </li>
+                          )
+                        })
+                      }
+                    </ul>
+                  </ScrollArea>
+                </div>
             </TabsContent>          
     
             <TabsContent value="skills" className="w-full min-h-[480px]">
