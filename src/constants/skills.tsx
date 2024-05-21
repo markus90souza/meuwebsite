@@ -4,22 +4,22 @@ import {
   FaHtml5,
   FaJs,
   FaNodeJs,
-  FaReact
+  FaReact,
 } from 'react-icons/fa'
 
-import { 
+import {
   SiAdonisjs,
   SiExpress,
   SiFastify,
   SiNestjs,
   SiNextdotjs,
   SiTailwindcss,
-  SiTypescript
+  SiTypescript,
 } from 'react-icons/si'
 
 export const skills = {
-  title: 'Minhas Skills',  
-  description: 'Um pouco minhas habilidades ', 
+  title: 'Minhas Skills',
+  description: 'Um pouco minhas habilidades ',
   skills: [
     {
       icon: <FaHtml5 />,
@@ -43,7 +43,7 @@ export const skills = {
       icon: <FaReact />,
       name: 'ReactJS',
     },
- 
+
     {
       icon: <SiNextdotjs />,
       name: 'NextJS',
@@ -75,6 +75,6 @@ export const skills = {
     {
       icon: <SiFastify />,
       name: 'Fastify',
-    }
-  ]
+    },
+  ],
 } as const

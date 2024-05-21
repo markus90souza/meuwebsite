@@ -18,5 +18,5 @@ export const about = {
       field: 'Estado',
       value: 'Brasília - DF',
     },
-  ]
+  ],
 } as const

@@ -16,5 +16,4 @@ export const stats = [
     value: '08',
     title: 'Tecnologias usadas',
   },
-
 ] as const

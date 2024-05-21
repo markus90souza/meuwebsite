@@ -7,12 +7,11 @@ export const education = {
       name: 'Analise e Desenvolvimento de Sistemas',
       institution: 'UDF - Universidade de Brasília',
       date: '2017 - 2019',
-    }, 
+    },
     {
       name: 'Bootcamp - GoStack',
       institution: 'Rocketseat',
       date: '2022 - Atualmente',
-    }
-  ]
-
+    },
+  ],
 } as const
