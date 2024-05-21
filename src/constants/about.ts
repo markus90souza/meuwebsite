@@ -15,13 +15,8 @@ export const about = {
       value: 'markus90souza@gmail.com',
     },
     {
-      field: 'Idade',
-      value: '34 anos',
-    },
-    {
-      field: 'Brasília',
-      value: 'Brasília, DF',
+      field: 'Estado',
+      value: 'Brasília - DF',
     },
   ]
-
 } as const

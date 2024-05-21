@@ -1,9 +1,11 @@
 'use client'
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { about } from "@/constants/about"
 import { education } from "@/constants/education"
 import { experiences } from "@/constants/experieces"
+import { skills } from "@/constants/skills"
 import { motion } from "framer-motion"
 
 
@@ -26,10 +28,7 @@ const ResumePage = () => {
       <div  className="container mx-auto">
         <Tabs defaultValue={'experience'} className="flex flex-col xl:flex-row gap-[60px]">
           <TabsList className="flex flex-col w-full max-w-96 mx-auto xl:mx-0 gap-6">
-            <TabsTrigger 
-            
-            className="bg-[#27272c] rounded-md"
-            value="about">
+            <TabsTrigger value="about">
               Sobre
             </TabsTrigger>
             <TabsTrigger value="experience">
@@ -43,8 +42,26 @@ const ResumePage = () => {
             </TabsTrigger>
           </TabsList>
           <div className="min-h-[70vh] w-full">
-            <TabsContent value="about" className="w-full min-h-[480px]">
-                About
+            <TabsContent value="about" className="w-full text-accent xl:text-left">
+              <div className="flex flex-col gap-[30px]">
+                <header className="flex flex-col gap-8 text-center xl:text-left">
+                  <strong className="text-4xl font-bold">{about.title}</strong>
+                  <span  className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</span>
+                </header>
+
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-6 w-full mx-auto xl:mx-0">
+                  {
+                    about.info.map((item, index) => {
+                      return (
+                        <li key={index} className="flex bg-[#232329] px-6 py-4 rounded-md flex-col items-center justify-center xl:justify-start gap-4">
+                          <span className="text-white">{item.field}</span>
+                          <span className="text-xl">{item.value}</span>
+                        </li>
+                      )
+                    })
+                  }
+                </ul>
+              </div>
             </TabsContent>
             <TabsContent value="experience" className="w-full">
                 <div className="flex flex-col gap-8 text-center xl:text-left">
@@ -80,7 +97,7 @@ const ResumePage = () => {
                   </ScrollArea>
                 </div>
             </TabsContent>
-            <TabsContent value="education" className="w-full min-h-[480px]">
+            <TabsContent value="education" className="w-full">
             <div className="flex flex-col gap-8 text-center xl:text-left">
                   <header className="flex flex-col gap-4">
                     <strong className="text-4xl font-semibold">
@@ -119,8 +136,40 @@ const ResumePage = () => {
                 </div>
             </TabsContent>          
     
-            <TabsContent value="skills" className="w-full min-h-[480px]">
-                Minhas skills
+            <TabsContent value="skills" className="w-full h-full">
+              <div className="flex flex-col gap-[30px]">
+                <header className="flex flex-col gap-[30px] text-center xl:text-left">
+                  <strong className="text-4xl font-bold">{skills.title}</strong>
+                  <span className="text-white/60 max-w-[600px] mx-auto xl:mx-0">{skills.description}</span>
+                </header>
+
+                <div className="">
+                  <ul  className="grid grid-cols-2 md:grid-cols-4 xl:gap-[30px] sm:grid-cols-3 gap-4">
+                  {
+                    skills.skills.map((skill, index) => {
+                      return (
+                          <li key={index}>
+                            <TooltipProvider delayDuration={100}>
+                              <Tooltip>
+                                <TooltipTrigger className="w-full h-[160px] bg-[#232329] rounded-xl flex items-center justify-center group">
+                                  <div className="text-6xl flex flex-col gap-3 items-center justify-center transition-all duration-300 group-hover:text-app-accent">
+                                    {skill.icon}
+                                    <span className="text-white/60 text-base group-hover:text-app-accent">{skill.name}</span>
+                                  </div>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                  {skill.name}
+                                </TooltipContent>
+                              </Tooltip>
+                            </TooltipProvider>
+                            
+                        </li>
+                    )
+                      })
+                  }
+                  </ul>
+                </div>
+              </div>
             </TabsContent>
           </div>
         </Tabs>
