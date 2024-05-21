@@ -152,7 +152,7 @@ const ResumePage = () => {
                   </span>
                 </header>
 
-                <div className="">
+                <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-2 md:grid-cols-4 xl:gap-[30px] sm:grid-cols-3 gap-4">
                     {skills.skills.map((skill, index) => {
                       return (
@@ -174,7 +174,7 @@ const ResumePage = () => {
                       )
                     })}
                   </ul>
-                </div>
+                </ScrollArea>
               </div>
             </TabsContent>
           </div>
